@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      购物车
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="cart_list">
+    <div class="cart_item">
+
+      <div class="cart_left">
+        <div class="item_chk">
+          &nbsp;<ion-checkbox color="danger"></ion-checkbox>
+        </div>
+        <div class="item_img">
+          <img src="assets/plist/list1.jpg"/>
+        </div>
+      </div>
+
+      <div class="cart_right">
+        <div class="item_title">
+          <span>这是一个商品名称</span>
+        </div>
+        <div class="item_info">
+          <div class="item_price">
+            <span>￥88元</span>
+          </div>
+          <div class="item_num">
+            <ion-buttons slot="end">
+              <ion-button (click)="onClick()">
+                <ion-icon name="add"></ion-icon>
+              </ion-button>
+              <input type="text" readonly value="1">
+              <ion-button (click)="onClick()">
+                <ion-icon name="add"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-checkbox></ion-checkbox>全选
+        <span>合计:</span>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="onClick()" fill="solid" color="danger">
+          <ion-icon slot="start" name="cart"></ion-icon>
+          去结算
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+
+</ion-content>

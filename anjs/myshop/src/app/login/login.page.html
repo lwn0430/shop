@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (tap)="goback()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (tap)="linkService()" color="dark">
+        联系客服
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login_log">
+    <img src="assets/log.jpg"/>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="手机号/邮箱号"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="密码"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <span slot="start">忘记密码</span>
+      <span slot="end">新用户注册</span>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (tap)="dologin()" expand="block" fill="solid" color="danger" class="btn_login">
+    登录
+  </ion-button>
+</ion-content>

@@ -1,0 +1,30 @@
+.user_center{
+    width: 100%;
+    height: 12rem;
+    background-color: #eb445a;
+    display: flex;
+    align-items: center;
+    padding: 3rem 1rem;
+    .user_left{
+        width: 5rem;
+        img{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 5rem;
+        }
+    }
+
+    .user_right{
+        flex: 1;
+        margin-left: 1rem;
+        color: white;
+        p{
+            font-size: 1.4rem;
+        }
+    }
+
+}
+
+ion-item-divider{
+    min-height: .5rem;
+}

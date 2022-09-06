@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot = "start" class="ihead">
+      <img src="/assets/icon/qr.png" />
+    </ion-buttons>
+    <ion-searchbar placeholder="请输入关键词" animated class="ihead" (tap)="gosearch()"></ion-searchbar>
+    <ion-buttons slot = "end" class="ihead">
+      <img src="/assets/icon/msg.png" />
+      <ion-badge color="danger">8</ion-badge>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="cate">
+    <div class="cate_left">
+      <ion-list>
+        <ion-item *ngFor="let item of lcatelist" lines="full" (tap)="getRcate(item._id)" [ngClass]="{taped: item._id==rparentid}">
+          <ion-label>{{item.title}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div class="cate_right">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="4" *ngFor="let item of rcatelist" [routerLink]="['/productlist']" [queryParams]="{cid:item._id}" >
+            <img [src]="config.dn+item.pic"/>
+            <p>{{item.title}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

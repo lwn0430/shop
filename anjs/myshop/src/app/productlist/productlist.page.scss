@@ -1,0 +1,65 @@
+.ihead{
+    margin-top: 1rem;
+    ion-button{
+        margin-right: 1rem;
+        font-size: 1.4rem;
+
+    }
+}
+
+
+.sub_menu{
+
+    --min-height: 3rem;
+    .sub_nav{
+        border-top: 1px solid #eee;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        div{
+            font-size: 1.4rem;
+            text-align: center;
+            flex: 1;
+        }
+        .actived{
+            color: crimson;
+        }
+    }
+
+}
+
+.search_result{
+    width: 100%;
+    .result_list{
+        width: 100%;
+        .result_item{
+            align-items: center;
+            height: 8rem;
+            display: flex;
+            border-bottom: 1px solid #eee;
+            .item_left{
+                width: 8rem;
+                padding: .8rem;
+                img{
+                    width: 6.4rem;
+                    height: 6.4rem;
+                }
+            }
+
+            .item_right{
+                padding: .8rem;
+                flex: 1;
+                
+                h3{
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    height: 5rem;
+                }
+                p{
+                    font-size: 1.4rem;
+                    color: red;
+                }
+            }
+        }
+    }
+}

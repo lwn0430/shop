@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="ihead">
+      <ion-button (tap)="goback()">
+        <ion-icon name="chevron-back-sharp" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-segment color="danger" [(ngModel)]="selectvalue">
+      <ion-segment-button value="info">
+        <ion-label>商品</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="detail">
+        <ion-label>详情</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div [ngSwitch]="selectvalue" class="p_content">
+  <div *ngSwitchCase="'info'" class="content1">
+    <div class="p_img" *ngIf="pdetail.pic">
+      <img [src]="config.dn+pdetail.pic"/>
+    </div>
+    <div class="p_info">
+      <div class="p_title">
+        <h2>{{pdetail.title}}</h2>
+        <P>{{pdetail.sub_title}}</P>
+      </div>
+      <div class="p_price">
+        <span class="s_price">&nbsp;&nbsp;特价:<span class="price">￥{{pdetail.price}}</span></span>原价: <span class="o_price">￥{{pdetail.old_price}}</span>
+      </div>
+    </div>
+    <div class="p_attr">
+      <div class="attr" *ngFor="let attr of pdetail.attr" (click)="selectspan($event)">
+        <strong>{{attr.cate}}:</strong>
+        <div class="r_attr">
+          <span *ngFor="let item of attr.list, let key=index" [ngClass]="{active: key==0}">{{item}}</span>
+          
+        </div>
+      </div>
+    
+      <div class="number">
+        <strong>数量:</strong>
+        <div class="blank"></div>
+        <div class="num">
+          <div class="sub" (click)="sub()">-</div>
+          <div class="num_value">
+              <input type="text" readonly value="10" [(ngModel)]="num"/>
+    
+          </div>
+          <div class="plus" (click)="plus()">+</div>
+        </div>
+      </div>
+      <div class="fee">
+        <strong>运费:</strong>
+        <span>免运费</span>
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchCase="'detail'">
+    <div [innerHtml]="pdetail.content">
+
+    </div>
+  </div>
+</div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class = "footer">
+      <div class = "cart">
+        <ion-icon slot = "start" name = "cart"></ion-icon>
+        <p>购物车</p>
+        <ion-badge color="danger">{{cartnum}}</ion-badge>
+      </div>
+      <div class="addcart" (click)="addcart()">加入购物车</div>
+      <div class="buy">立即购买</div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

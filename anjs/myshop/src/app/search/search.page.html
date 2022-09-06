@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="ihead">
+      <ion-button (tap)="goback()">
+        <ion-icon name="chevron-back-sharp" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-searchbar placeholder="请输入关键词" animated class="ihead"></ion-searchbar>
+    <ion-buttons slot="end" class="ihead">
+      <ion-button (tap)="search()" color="dark">
+        搜索
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar class="sub_menu" *ngIf="flag">
+    <div class="sub_nav">
+      <div>综合</div>
+      <div>销量</div>
+      <div>价格</div>
+    </div>
+    
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <div class="search_content" *ngIf="!flag">
+    <div class="search_hot">
+      <div class="hot_title">
+        <span>热搜</span>
+      </div>
+      <div class="hot_content">
+        <span>衣服</span>
+        <span>衣服</span>
+        <span>衣服</span>
+        <span>衣服</span>
+        <span>衣服</span>
+        <span>衣服</span>
+        <span>衣服</span>
+        <span>衣服</span>
+        <span>衣服</span>
+      </div>
+    </div>
+    <div class="search_his">
+      <div class="his_title">
+        <span>搜索历史</span>
+      </div>
+      <div class="his_content">
+        <ion-list lines="full">
+          <ion-item>
+            <ion-label>男士服装</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>男士服装</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>男士服装</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>男士服装</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>男士服装</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </div>
+
+  <div class="search_result" *ngIf="flag">
+    <div class="result_list">
+      <div class="result_item">
+        <div class="item_left">
+          <img src="/assets/plist/list1.jpg" />
+        </div>
+        <div class="item_right">
+          <h3>一点寒光万丈芒</h3>
+          <p>价格：58元</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

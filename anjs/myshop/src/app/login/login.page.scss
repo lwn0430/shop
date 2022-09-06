@@ -1,0 +1,32 @@
+ion-toolbar{
+    --border-color: white;
+    ion-buttons{
+        ion-button{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.login_log{
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    img{
+        width: 12rem;
+        height: 12rem;
+        border-radius: 12rem;
+    }
+}
+
+ion-list{
+    ion-item{
+        ion-input,span{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.btn_login{
+    width: 90%;
+    margin: 2rem auto;
+}

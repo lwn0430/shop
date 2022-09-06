@@ -1,0 +1,98 @@
+ion-header
+{
+    ion-toolbar{
+        ion-title{
+            background-color: #eee;
+        }
+    }
+}
+
+.cart_list{
+    width: 100%;
+    .cart_item{
+        width: 100%;
+        height: 12rem;
+        display: flex;
+        border-bottom: 1px solid #eee;
+        .cart_left{
+            width: 12rem;
+            display: flex;
+            align-items: center;
+            .item_chk
+            {
+                width: 3rem;
+                ion-checkbox{
+                    //padding-left: 1rem;
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            .item_img{
+                flex: 1;
+                img{        
+                    width: 7rem;
+                    height: 7rem;
+                }
+            }
+        }
+        .cart_right{
+            flex: 1;
+            .item_title{
+                height: 5rem;
+                padding: .5rem;
+                span{
+                    font-size: 1.6rem;
+                    font-weight: 550;
+                }
+            }
+            .item_info{
+                display: flex;
+                align-items: center;
+                .item_price{
+                    width: 5rem;
+                    span{
+                        color: red;
+                        font-size: 1.4rem;
+                        font-weight: 500px;
+                    }
+                }
+                .item_num{
+                    flex: 1;
+                    ion-buttons{
+                        float: right;
+                        ion-button{
+                            background-color: #eee;
+                            border: 1px solid #eee;
+                            color: black;
+                            font-size: 1.2rem;
+                            margin: 0px;
+                        }
+                        input{
+                            width: 4rem;
+                            border: 1px solid #eee;
+                            height: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+ion-footer{
+    ion-toolbar{
+        ion-buttons{
+            font-size: 1.6rem;
+            ion-checkbox{
+                // padding-left: 0.2rem;
+                width: 2rem;
+                height: 2rem;
+            }
+            span{
+                font-size: 1.6rem;
+                font-weight: 500;
+                margin-left: 2rem;
+            }
+        }
+    }
+}

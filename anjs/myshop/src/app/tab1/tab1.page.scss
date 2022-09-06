@@ -1,0 +1,80 @@
+.ihead{
+    margin-top: 1rem;
+    ion-badge{
+        position:absolute;
+        right: 2px;
+        top: 0px;
+    }
+}
+
+ion-slides{
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    ion-slide{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.love_title{
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    &::before{
+        border-left: 3px solid #eb445a;
+        content:"";
+        display:inline-block;
+        height: 14px;
+        width: 1px;
+        position: relative;
+        top: 2px;
+    }
+}
+
+.hotlist{
+    width: 100%;
+    height: 10rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    ul{
+        width: 90rem;
+        li{
+            float: left;
+            width: 10rem;
+            height: 10rem;
+        }
+        img{
+            width: 8rem;
+            height: 8rem;
+            margin-left: 0.5rem;
+        }
+        p{
+            text-align: center;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.plist{
+    width: 100%;
+    //height: 10rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    img{
+        width: 11rem;
+        height: 11rem;
+        margin-left: 0.5rem;
+    }
+    p{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+ion-col{
+    p{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
